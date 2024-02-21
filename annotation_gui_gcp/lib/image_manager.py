@@ -41,7 +41,7 @@ class ImageManager:
                 exif = data.load_exif(k)
                 if "l" in exif:
                     latlons[k] = exif["l"]
-                elif "gps" in exif:
+                elif "gps" in exif and len(exif["gps"]) > 0:
                     latlons[k] = {
                         "lat": exif["gps"]["latitude"],
                         "lon": exif["gps"]["longitude"],

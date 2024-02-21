@@ -9,6 +9,8 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as pl
 import numpy as np
 from numpy import ndarray
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from opensfm import dataset, features, io
 
 
@@ -73,7 +75,7 @@ def plot_graph(data) -> None:
 def plot_matches_for_images(data, image, images) -> None:
     if image:
         pairs = [(image, o) for o in images if o != image]
-    elif images:
+    elif False:
         subset = images.split(",")
         pairs = combinations(subset, 2)
     else:
@@ -131,7 +133,7 @@ def main() -> None:
     if args.graph:
         plot_graph(data)
     else:
-        plot_matches_for_images(data, args.image, args.images)
+        plot_matches_for_images(data, args.image, images)
 
 
 args: argparse.Namespace

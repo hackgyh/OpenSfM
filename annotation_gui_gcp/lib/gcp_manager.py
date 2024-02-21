@@ -141,7 +141,7 @@ class GroundControlPointManager:
                 point.geodetic_measurement = GeodeticMeasurement(
                     longitude=geo["longitude"],
                     latitude=geo["latitude"],
-                    measured_at=geo["measured_at"],
+                    measured_at=0,
                     altitude=geo.get("altitude"),
                     horizontal_std=geo.get("horizontal_std", 100),
                     vertical_std=geo.get("vertical_std"),

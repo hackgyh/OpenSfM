@@ -129,7 +129,7 @@ py::tuple hahog(foundation::pyarray_f image, float peak_threshold,
   std::vector<float> points;
   std::vector<float> desc;
   vl_size numFeatures;
-  vl_size dimension = 128;
+  vl_size dimension = 256;
 
   {
     py::gil_scoped_release release;

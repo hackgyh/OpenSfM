@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Union
 
 import numpy as np
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from annotation_gui_gcp.lib import GUI
 from annotation_gui_gcp.lib.gcp_manager import GroundControlPointManager
 from annotation_gui_gcp.lib.image_manager import ImageManager

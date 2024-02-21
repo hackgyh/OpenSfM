@@ -458,7 +458,7 @@ class EXIF:
                     )
                 return (d - datetime.datetime(1970, 1, 1)).total_seconds()
         logger.info(
-            'Image file "{0:s}" has no valid time stamp'.format(self.fileobj_name)
+            'Image file "{0}" has no valid time stamp'.format(self.fileobj_name)
         )
         return 0.0
 

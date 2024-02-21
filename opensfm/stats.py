@@ -533,6 +533,7 @@ def save_matchgraph(
         orientation="horizontal",
         label="Number of matches between images",
         pad=0.0,
+        ax=ax,
     )
 
     with io_handler.open(os.path.join(output_path, "matchgraph.png"), "wb") as fwb:
@@ -927,7 +928,7 @@ def save_residual_grids(
         res_colors /= highest - lowest
 
         plt.clf()
-        plt.figure(figsize=(12, 10))
+        fig, ax = plt.subplots(figsize=(12, 10))
         Q = plt.quiver(
             camera_array_res[:, :, 0] * scaling,
             camera_array_res[:, :, 1] * scaling,
@@ -964,6 +965,7 @@ def save_residual_grids(
             label="Residual Norm",
             pad=0.08,
             aspect=40,
+            ax=ax,
         )
 
         plt.xticks(
